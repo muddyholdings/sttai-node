@@ -13,8 +13,8 @@ class STTClient {
   /**
    * Create an STT.ai client
    * @param {Object} options
-   * @param {string} options.apiKey - Your STT.ai API key
-   * @param {string} [options.baseUrl=https://api.stt.ai] - API base URL
+   * @param {string} options.apiKey: Your STT.ai API key
+   * @param {string} [options.baseUrl=https://api.stt.ai]: API base URL
    */
   constructor({ apiKey, baseUrl = 'https://api.stt.ai' } = {}) {
     if (!apiKey) {
@@ -95,13 +95,13 @@ class STTClient {
 
   /**
    * Transcribe an audio file
-   * @param {string} filePath - Path to the audio file
+   * @param {string} filePath: Path to the audio file
    * @param {Object} [options]
-   * @param {string} [options.model] - Transcription model to use
-   * @param {string} [options.language] - Language code (e.g., "en", "es")
-   * @param {boolean} [options.diarize] - Enable speaker diarization
-   * @param {number} [options.speakers] - Expected number of speakers
-   * @param {string} [options.responseFormat] - Response format ("json", "text", "srt", "vtt")
+   * @param {string} [options.model]: Transcription model to use
+   * @param {string} [options.language]: Language code (e.g., "en", "es")
+   * @param {boolean} [options.diarize]: Enable speaker diarization
+   * @param {number} [options.speakers]: Expected number of speakers
+   * @param {string} [options.responseFormat]: Response format ("json", "text", "srt", "vtt")
    * @returns {Promise<Object>} Transcription result
    */
   async transcribe(filePath, options = {}) {
@@ -140,8 +140,8 @@ class STTClient {
 
   /**
    * Summarize text
-   * @param {string} text - Text to summarize
-   * @param {string} [style="brief"] - Summarization style ("brief", "detailed", "bullets", "headline")
+   * @param {string} text: Text to summarize
+   * @param {string} [style="brief"]: Summarization style ("brief", "detailed", "bullets", "headline")
    * @returns {Promise<Object>} Summary result
    */
   async summarize(text, style = 'brief') {
@@ -174,10 +174,10 @@ class STTClient {
 
   /**
    * Open a WebSocket connection for streaming transcription
-   * @param {Function} callback - Called with each transcription chunk
+   * @param {Function} callback: Called with each transcription chunk
    * @param {Object} [options]
-   * @param {string} [options.model] - Transcription model
-   * @param {string} [options.language] - Language code
+   * @param {string} [options.model]: Transcription model
+   * @param {string} [options.language]: Language code
    * @returns {EventEmitter} Emits 'transcript', 'partial', 'error', 'close' events
    */
   stream(callback, options = {}) {

@@ -1,6 +1,6 @@
 # sttai
 
-Official Node.js SDK for [STT.ai](https://stt.ai) — Speech-to-Text API.
+Official Node.js SDK for [STT.ai](https://stt.ai): Speech-to-Text API.
 
 Transcribe audio files, stream live audio, summarize transcripts, and more.
 
@@ -131,7 +131,7 @@ try {
   } else if (err instanceof RateLimitError) {
     console.error(`Rate limited. Retry after ${err.retryAfter} seconds`);
   } else if (err instanceof CreditError) {
-    console.error('Out of credits — upgrade at https://stt.ai/pricing');
+    console.error('Out of credits, upgrade at https://stt.ai/pricing');
   } else if (err instanceof STTError) {
     console.error(`API error (${err.statusCode}): ${err.message}`);
   }
@@ -151,25 +151,25 @@ try {
 
 | Parameter | Type | Required | Default | Description |
 |---|---|---|---|---|
-| `apiKey` | `string` | Yes | — | Your STT.ai API key |
+| `apiKey` | `string` | Yes | none | Your STT.ai API key |
 | `baseUrl` | `string` | No | `https://api.stt.ai` | API base URL |
 
 ### `client.transcribe(filePath, options)`
 
 | Parameter | Type | Required | Default | Description |
 |---|---|---|---|---|
-| `filePath` | `string` | Yes | — | Path to audio file |
-| `options.model` | `string` | No | — | Transcription model |
-| `options.language` | `string` | No | — | Language code |
+| `filePath` | `string` | Yes | none | Path to audio file |
+| `options.model` | `string` | No | none | Transcription model |
+| `options.language` | `string` | No | none | Language code |
 | `options.diarize` | `boolean` | No | `false` | Enable speaker diarization |
-| `options.speakers` | `number` | No | — | Expected number of speakers |
+| `options.speakers` | `number` | No | none | Expected number of speakers |
 | `options.responseFormat` | `string` | No | `json` | Response format |
 
 ### `client.summarize(text, style)`
 
 | Parameter | Type | Required | Default | Description |
 |---|---|---|---|---|
-| `text` | `string` | Yes | — | Text to summarize |
+| `text` | `string` | Yes | none | Text to summarize |
 | `style` | `string` | No | `brief` | Style: brief, detailed, bullets, headline |
 
 ### `client.models()`

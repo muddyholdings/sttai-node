@@ -1,6 +1,6 @@
 {
   "name": "@sttainpm/sttai",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official Node.js SDK for STT.ai — Speech-to-Text API",
   "main": "src/index.js",
   "exports": {
@@ -27,10 +27,10 @@
   "homepage": "https://stt.ai",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sttaigit/sttai-node.git"
+    "url": "https://github.com/muddyholdings/sttai-node.git"
   },
   "bugs": {
-    "url": "https://github.com/sttaigit/sttai-node/issues"
+    "url": "https://github.com/muddyholdings/sttai-node/issues"
   },
   "engines": {
     "node": ">=16.0.0"
